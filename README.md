@@ -8,6 +8,7 @@ This repo comes with some github actions. For that to work, you will need to add
 - create the token here `www.npmjs.com/settings/YOUR_NAME/tokens` if you dont already have one.
 
 also allow actions to create PRs `settings -> Actions -> General -> checkbox Allow create pull requests`
+also allow write permission to let action push to main on pushes to main
 
 ### resources
 
