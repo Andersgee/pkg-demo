@@ -3,5 +3,5 @@ export type Kek = {
 };
 
 export function mek(x: Kek) {
-	return 12 * x.m;
+	return 122 * x.m;
 }
