@@ -2,10 +2,12 @@
 
 ### github actions
 
-This repo has some github actions setup. For that to work, you will need to add a `NPM_TOKEN` in repository secrets:
+This repo comes with some github actions. For that to work, you will need to add a `NPM_TOKEN` in repository secrets:
 
 - on your github project, go to `settings -> Secrets and variables -> Actions -> Repository secrets`
 - create the token here `www.npmjs.com/settings/YOUR_NAME/tokens` if you dont already have one.
+
+also allow actions to create PRs `settings -> Actions -> General -> checkbox Allow create pull requests`
 
 ### resources
 
