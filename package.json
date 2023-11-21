@@ -3,7 +3,7 @@
 	"author": "andersgee",
 	"description": "Example npm package",
 	"license": "MIT",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
 	"scripts": {
 		"build": "rm -rf ./dist && tsc",
 		"release": "pnpm run build && changeset publish",
-		"lint": "eslint"
+		"lint": "eslint src --ext .ts"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.26.2",
