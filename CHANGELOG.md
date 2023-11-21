@@ -1,5 +1,11 @@
 # @andersgee/pkg-demo
 
+## 0.0.4
+
+### Patch Changes
+
+- 6e4d0c8: lets go?
+
 ## 0.0.3
 
 ### Patch Changes
