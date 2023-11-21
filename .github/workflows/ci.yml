@@ -8,13 +8,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup npm
+        uses: pnpm/action-setup@v2
         with:
           version: 8.x
-      - uses: actions/setup-node@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: 20.x
           cache: "pnpm"
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint && pnpm run build
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint and build
+        run: pnpm run lint && pnpm run build
