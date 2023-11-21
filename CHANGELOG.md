@@ -1,5 +1,13 @@
 # @andersgee/pkg-demo
 
+## 0.0.6
+
+### Patch Changes
+
+- 271742c: 9 is better
+- b6bdd87: 4 is the way
+- 39a43ff: 3 after all
+
 ## 0.0.5
 
 ### Patch Changes
