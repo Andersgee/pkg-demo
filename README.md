@@ -1,31 +1,22 @@
 # pkg-demo
 
-tldr:
+Essentially a clone of [mattpocock/pkg-demo](https://github.com/mattpocock/pkg-demo) but with a README and some modifications.
 
-when pushing to main branch, the action will create a PR suggesting a release. Merging that will publish it npm. You dont have to merge it right away: pushing more stuff to main will update the PR accordingly by using whatever `.changeset/*.md` files you created with `pnpm changeset`.
+### github actions and changesets
 
-### github actions
+This repo comes with some github actions. For them to work, you will need to add a `NPM_TOKEN` in repository secrets:
 
-This repo comes with some github actions. For that to work, you will need to add a `NPM_TOKEN` in repository secrets:
+- create a (classic) npm token here `www.npmjs.com/settings/YOUR_NAME/tokens`
+- add it on your github project: `settings -> Secrets and variables -> Actions -> Repository secrets`
+  - also give actions write permission and allow them to create PRs `settings -> Actions -> General`
 
-- on your github project, go to `settings -> Secrets and variables -> Actions -> Repository secrets`
-- create the token here `www.npmjs.com/settings/YOUR_NAME/tokens` if you dont already have one.
+Changesets is a handy cli tool that helps you manage versioning and changelog. Any time you feel like your changes are merge worthy: run `pnpm changeset` and type a description (it only creates a `.changeset/*.md` file).
 
-also allow actions to create PRs `settings -> Actions -> General -> checkbox Allow create pull requests`
-also allow write permission to let action push to main on pushes to main
+Any time a push passes CI or main branch is updated, the `publish` action will create a PR suggesting a release. Merging that PR will
 
-### resources
+- combine any `.changeset/*.md` into `CHANGELOG.md`
+- update version in `package.json`
+- build and publish the package to npm
+- update main branch (with a release tag)
 
-[intro to using changesets](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md)
-
-tldr;
-
-```sh
-#cli to create a .changeset/*.md file (patch, minor or major)
-#(not every change requires a changest, but often run this several times before creating a release)
-pnpm changeset
-
-#create a release
-#combines .changeset/*.md files and edits CHANGELOG.md, also edits version in package.json
-pnpm changeset version
-```
+You dont have to accept the PR right away: pushing or merging more stuff will update the PR accordingly.
