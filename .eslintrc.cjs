@@ -8,7 +8,7 @@ const config = {
 	extends: ["plugin:@typescript-eslint/recommended-type-checked", "plugin:@typescript-eslint/stylistic-type-checked"],
 	rules: {
 		//optionally adjust some rules to better fit your project here:
-		"@typescript-eslint/consistent-type-definitions": "off",
+		//"@typescript-eslint/consistent-type-definitions": "off",
 		"@typescript-eslint/array-type": "off",
 
 		// "@typescript-eslint/no-explicit-any": "off",
