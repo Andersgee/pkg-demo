@@ -1,5 +1,11 @@
 # @andersgee/pkg-demo
 
+## 0.0.5
+
+### Patch Changes
+
+- 0fa8ccd: main entrypoint
+
 ## 0.0.4
 
 ### Patch Changes
