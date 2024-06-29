@@ -15,9 +15,9 @@
 		"moduleResolution": "NodeNext",
 		"module": "NodeNext",
 		"outDir": "dist",
-		"sourceMap": true,
+		"sourceMap": false,
 		/* AND if you're building for a library: */
-		"declaration": true,
+		"declaration": false,
 		/* AND if you're building for a library in a monorepo: */
 		//"composite": true,
 		//"declarationMap": true,

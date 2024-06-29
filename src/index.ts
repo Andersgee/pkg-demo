@@ -1,2 +1,3 @@
-export { add } from "./stuff.js";
-export type { Kek } from "./yop/mek.js";
+import { add } from "./stuff.js";
+
+console.log(add(4, 7));
