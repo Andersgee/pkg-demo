@@ -21,6 +21,9 @@
 		"release": "pnpm run build && changeset publish",
 		"lint": "eslint src --ext .ts"
 	},
+	"imports": {
+		"#src/*": "./dist/*"
+	},
 	"devDependencies": {
 		"@changesets/cli": "^2.26.2",
 		"@types/eslint": "^8.44.7",

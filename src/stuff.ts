@@ -1,4 +1,4 @@
-import { type Kek, mek } from "./yop/mek.js";
+import { type Kek, mek } from "#src/yop/mek.js";
 
 export function add(a: number, b: number) {
 	const l: Kek = { m: 9 };
